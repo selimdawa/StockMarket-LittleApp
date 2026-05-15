@@ -61,16 +61,12 @@ android {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
     buildFeatures {
-        dataBinding = true
-        //buildConfig = true
         compose = true
     }
 }
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.preference.ktx)           //Shared Preference
     implementation(libs.androidx.activity.compose)
     testImplementation(libs.junit)
@@ -83,7 +79,7 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.tooling.preview)
     //implementation(libs.androidx.material3)
-    implementation(libs.androidx.compose.material)  //Stay
+    implementation(libs.androidx.compose.material)
     implementation(libs.androidx.compose.material.icons.extended)
     //Compose Layout Test
     androidTestImplementation(platform(libs.androidx.compose.bom))
