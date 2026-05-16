@@ -3,8 +3,8 @@ package com.littleapp.stockmarket.di
 import android.app.Application
 import androidx.room.Room
 import com.littleapp.stockmarket.Unit.DATA
-import com.littleapp.stockmarket.data.local.StockDatabase
-import com.littleapp.stockmarket.data.remote.StockApi
+import com.littleapp.stockmarket.presentation.data.local.StockDatabase
+import com.littleapp.stockmarket.presentation.data.remote.StockApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.littleapp.stockmarket.data.local
+package com.littleapp.stockmarket.presentation.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

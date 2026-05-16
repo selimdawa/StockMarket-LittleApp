@@ -1,6 +1,6 @@
-package com.littleapp.stockmarket.data.mapper
+package com.littleapp.stockmarket.presentation.data.mapper
 
-import com.littleapp.stockmarket.data.local.CompanyListingEntity
+import com.littleapp.stockmarket.presentation.data.local.CompanyListingEntity
 import com.littleapp.stockmarket.domain.model.CompanyListing
 
 fun CompanyListingEntity.toCompanyListing(): CompanyListing {

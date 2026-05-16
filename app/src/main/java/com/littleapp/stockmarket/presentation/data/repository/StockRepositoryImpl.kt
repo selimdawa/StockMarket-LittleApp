@@ -1,11 +1,11 @@
-package com.littleapp.stockmarket.data.repository
+package com.littleapp.stockmarket.presentation.data.repository
 
 import com.littleapp.stockmarket.Unit.DATA
-import com.littleapp.stockmarket.data.csv.CSVParser
-import com.littleapp.stockmarket.data.local.StockDatabase
-import com.littleapp.stockmarket.data.mapper.toCompanyListing
-import com.littleapp.stockmarket.data.mapper.toCompanyListingEntity
-import com.littleapp.stockmarket.data.remote.StockApi
+import com.littleapp.stockmarket.presentation.data.csv.CSVParser
+import com.littleapp.stockmarket.presentation.data.local.StockDatabase
+import com.littleapp.stockmarket.presentation.data.mapper.toCompanyListing
+import com.littleapp.stockmarket.presentation.data.mapper.toCompanyListingEntity
+import com.littleapp.stockmarket.presentation.data.remote.StockApi
 import com.littleapp.stockmarket.domain.model.CompanyListing
 import com.littleapp.stockmarket.domain.repository.StockRepository
 import com.littleapp.stockmarket.presentation.util.Resource

@@ -1,4 +1,4 @@
-package com.littleapp.stockmarket.data.local
+package com.littleapp.stockmarket.presentation.data.local
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

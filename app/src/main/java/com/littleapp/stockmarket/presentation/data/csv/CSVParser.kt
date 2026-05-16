@@ -1,4 +1,4 @@
-package com.littleapp.stockmarket.data.csv
+package com.littleapp.stockmarket.presentation.data.csv
 
 import java.io.InputStream
 

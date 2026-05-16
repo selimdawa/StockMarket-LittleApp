@@ -1,4 +1,4 @@
-package com.littleapp.stockmarket.data.remote
+package com.littleapp.stockmarket.presentation.data.remote
 
 import com.littleapp.stockmarket.Unit.DATA
 import okhttp3.ResponseBody

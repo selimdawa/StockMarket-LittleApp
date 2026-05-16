@@ -1,6 +1,6 @@
 package com.littleapp.stockmarket.Unit
 
-import com.littleapp.stockmarket.Activity.SplashActivity
+import com.littleapp.stockmarket.presentation.SplashActivity
 import com.littleapp.stockmarket.presentation.MainActivity
 
 object CLASS {
