@@ -25,9 +25,9 @@ preferenceKtx = "1.2.1"
 ksp = "2.3.8"
 hilt = "2.59.2"
 retrofit = "3.0.0"
-roomRuntime = "2.5.1"
-roomCompiler = "2.5.1"
-roomKtx = "2.5.1"
+roomRuntime = "2.8.4"
+roomCompiler = "2.8.4"
+roomKtx = "2.8.4"
 
 [libraries]
 accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanistSwiperefresh" }
