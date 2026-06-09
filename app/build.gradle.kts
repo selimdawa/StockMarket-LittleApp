@@ -4,17 +4,12 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp.processor)
     alias(libs.plugins.daggerHiltAndroid)
-    //id("kotlin-parcelize")
 }
 
 android {
-
     namespace = "com.littleapp.stockmarket"
-    //compileSdk = 36
     compileSdk {
-        version = release(37) //{
-            //minorApiLevel = 1
-        //}
+        version = release(37)
     }
 
     defaultConfig {
@@ -28,15 +23,6 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-
-        //val properties = Properties().apply {
-        //    val propertiesFile = rootProject.file("local.properties")
-        //    if (propertiesFile.exists()) {
-        //        propertiesFile.inputStream().use { load(it) }
-        //    }
-        //}
-
-        //buildConfigField("String", "API_KEY", "\"${properties.getProperty("API_KEY")}\"")
     }
 
     buildTypes {
@@ -57,9 +43,6 @@ android {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
         }
     }
-    //composeOptions {
-    //    kotlinCompilerExtensionVersion = "1.5.1"
-    //}
     buildFeatures {
         compose = true
     }
@@ -109,4 +92,5 @@ dependencies {
     //Other's
     implementation(libs.opencsv)
     implementation(libs.accompanist.swiperefresh)
+    ksp(libs.kotlin.metadata.jvm)
 }
