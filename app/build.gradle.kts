@@ -4,23 +4,23 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp.processor)
     alias(libs.plugins.daggerHiltAndroid)
-    id("kotlin-parcelize")
+    //id("kotlin-parcelize")
 }
 
 android {
 
     namespace = "com.littleapp.stockmarket"
-    compileSdk = 36
-    //compileSdk {
-    //version = release(36) {
-    //minorApiLevel = 1
-    //}
-    //}
+    //compileSdk = 36
+    compileSdk {
+        version = release(37) //{
+            //minorApiLevel = 1
+        //}
+    }
 
     defaultConfig {
         applicationId = "com.littleapp.stockmarket"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
@@ -57,9 +57,9 @@ android {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
         }
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
+    //composeOptions {
+    //    kotlinCompilerExtensionVersion = "1.5.1"
+    //}
     buildFeatures {
         compose = true
     }
@@ -94,6 +94,9 @@ dependencies {
     ksp(libs.hilt.android.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
     ksp(libs.androidx.hilt.compiler)
+    //Life Cycle
+    implementation(libs.androidx.lifecycle.viewmodel.compose.android)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
     //Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.moshi)
@@ -104,8 +107,6 @@ dependencies {
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
     //Other's
-    implementation(libs.androidx.lifecycle.viewmodel.compose.android)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.opencsv)
     implementation(libs.accompanist.swiperefresh)
 }

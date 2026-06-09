@@ -20,9 +20,10 @@ import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.littleapp.stockmarket.presentation.companylistings.CompanyListingsEvent
 import com.littleapp.stockmarket.presentation.companylistings.CompanyListingsViewModel
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.annotation.RootGraph // Added this import
 
 @Composable
-@Destination(start = true)
+@Destination<RootGraph>(start = true) // Updated to use the 2.x generic syntax
 fun CompanyListingsScreen(
     viewModel: CompanyListingsViewModel = hiltViewModel(),
 ) {
