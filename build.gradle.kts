@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.compose) apply false
-    alias(libs.plugins.daggerHiltAndroid) apply false
-    alias(libs.plugins.ksp.processor) apply false
+    alias(libs.plugins.google.ksp) apply false
+    alias(libs.plugins.dagger.hilt.android) apply false
+    alias(libs.plugins.navigation.safeargs.kotlin) apply false
 }
