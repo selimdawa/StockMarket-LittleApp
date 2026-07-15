@@ -2,9 +2,10 @@ package com.littleapp.stockmarket.di
 
 import android.app.Application
 import androidx.room.Room
-import com.littleapp.stockmarket.Unit.DATA
-import com.littleapp.stockmarket.presentation.data.local.StockDatabase
-import com.littleapp.stockmarket.presentation.data.remote.StockApi
+import com.littleapp.stockmarket.data.local.StockDao
+import com.littleapp.stockmarket.data.local.StockDatabase
+import com.littleapp.stockmarket.data.remote.StockApi
+import com.littleapp.stockmarket.util.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,12 +18,11 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-
     @Provides
     @Singleton
     fun provideStockApi(): StockApi {
         return Retrofit.Builder()
-            .baseUrl(DATA.BASE_URL_STOCK_MARKET)
+            .baseUrl(Constants.BASE_URL)
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
             .create()
@@ -31,10 +31,10 @@ object AppModule {
     @Provides
     @Singleton
     fun provideStockDatabase(app: Application): StockDatabase {
-        return Room.databaseBuilder(
-            app,
-            StockDatabase::class.java,
-            "stockdb.db"
-        ).build()
+        return Room.databaseBuilder(app, StockDatabase::class.java, "stockdb.db").build()
     }
+
+    @Provides
+    @Singleton
+    fun provideStockDao(db: StockDatabase): StockDao = db.dao
 }

@@ -17,7 +17,7 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:supportsRtl">
         <activity
-            android:name=".presentation.SplashActivity"
+            android:name=".presentation.splash.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".presentation.main.MainActivity"
             android:screenOrientation="portrait" />
     </application>
 
