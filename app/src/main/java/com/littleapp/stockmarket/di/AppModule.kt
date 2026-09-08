@@ -2,30 +2,33 @@ package com.littleapp.stockmarket.di
 
 import android.app.Application
 import androidx.room.Room
-import com.littleapp.stockmarket.data.local.StockDao
-import com.littleapp.stockmarket.data.local.StockDatabase
-import com.littleapp.stockmarket.data.remote.StockApi
-import com.littleapp.stockmarket.util.Constants
+import com.littleapp.stockmarket.data.StockDao
+import com.littleapp.stockmarket.data.StockDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
-import retrofit2.create
+import io.ktor.client.HttpClient
+import io.ktor.client.engine.okhttp.OkHttp
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.serialization.kotlinx.json.json
+import kotlinx.serialization.json.Json
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+    
     @Provides
     @Singleton
-    fun provideStockApi(): StockApi {
-        return Retrofit.Builder()
-            .baseUrl(Constants.BASE_URL)
-            .addConverterFactory(MoshiConverterFactory.create())
-            .build()
-            .create()
+    fun provideHttpClient(): HttpClient {
+        return HttpClient(OkHttp) {
+            install(ContentNegotiation) {
+                json(Json {
+                    ignoreUnknownKeys = true
+                })
+            }
+        }
     }
 
     @Provides

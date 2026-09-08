@@ -14,13 +14,11 @@ android {
         applicationId = "com.littleapp.stockmarket"
         minSdk = 24
         targetSdk = 37
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+        manifestPlaceholders["appName"] = "Stock Market"
     }
 
     buildTypes {
@@ -57,6 +55,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    //Theme
+    implementation(libs.multicolors)
     //Navigation
     implementation(libs.compose.destinations.core)
     ksp(libs.compose.destinations.ksp)
@@ -78,6 +78,11 @@ dependencies {
     implementation(libs.logging.interceptor)
     //CSV Parsing
     implementation(libs.opencsv)
+    //Ktor
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.okhttp)
+    implementation(libs.ktor.client.content.negotiation)
+    implementation(libs.ktor.serialization.kotlinx.json)
     //Coroutines
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)

@@ -1,10 +1,8 @@
 package com.littleapp.stockmarket.di
 
-import com.littleapp.stockmarket.data.csv.CSVParser
-import com.littleapp.stockmarket.data.csv.CompanyListingsParser
-import com.littleapp.stockmarket.data.repository.StockRepositoryImpl
-import com.littleapp.stockmarket.domain.model.CompanyListing
-import com.littleapp.stockmarket.domain.repository.StockRepository
+import com.littleapp.stockmarket.network.CSVParser
+import com.littleapp.stockmarket.network.CompanyListingsParser
+import com.littleapp.stockmarket.model.CompanyListing
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -17,8 +15,4 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindCSVParser(parser: CompanyListingsParser): CSVParser<CompanyListing>
-
-    @Binds
-    @Singleton
-    abstract fun bindStockRepository(repo: StockRepositoryImpl): StockRepository
 }

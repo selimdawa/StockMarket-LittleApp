@@ -19,6 +19,8 @@ room = "2.8.4"
 material3 = "1.4.0"
 material = "1.14.0"
 preference = "1.2.1"
+ktor = "3.5.2"
+multicolors = "1.0.8-beta3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -59,6 +61,14 @@ okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
 #CSV
 opencsv = { module = "com.opencsv:opencsv", version.ref = "opencsv" }
+#MultiColors
+multicolors = { group = "com.github.selimdawa", name = "MultiColors", version.ref = "multicolors" }
+
+#Ktor
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
