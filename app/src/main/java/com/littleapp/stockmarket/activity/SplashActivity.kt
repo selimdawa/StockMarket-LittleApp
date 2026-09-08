@@ -1,5 +1,6 @@
 package com.littleapp.stockmarket.activity
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -36,6 +37,7 @@ import com.littleapp.stockmarket.ui.theme.Strings
 import com.littleapp.stockmarket.utils.launchActivity
 import dagger.hilt.android.AndroidEntryPoint
 
+@SuppressLint("CustomSplashScreen")
 @AndroidEntryPoint
 class SplashActivity : ComponentActivity() {
 
