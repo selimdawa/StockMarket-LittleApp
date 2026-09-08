@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.ksp)
     alias(libs.plugins.dagger.hilt.android)
-    alias(libs.plugins.navigation.safeargs.kotlin)
 }
 
 android {
@@ -42,15 +41,14 @@ android {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.preference.ktx)
     implementation(libs.androidx.activity.compose)
     //UI
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.material)
-    implementation(libs.androidx.compose.material.icons.extended)
+    implementation(libs.androidx.material.icons.core)
+    implementation(libs.androidx.material.icons.extended)
     //Lifecycle
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
@@ -58,26 +56,14 @@ dependencies {
     //Theme
     implementation(libs.multicolors)
     //Navigation
-    implementation(libs.compose.destinations.core)
-    ksp(libs.compose.destinations.ksp)
     implementation(libs.androidx.navigation.compose)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.hilt.navigation.compose)
-    implementation(libs.androidx.hilt.navigation.fragment)
     //Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
     //Room
     implementation(libs.androidx.room.runtime)
     ksp(libs.androidx.room.compiler)
-    //Retrofit
-    implementation(libs.retrofit)
-    implementation(libs.converter.moshi)
-    implementation(libs.okhttp)
-    implementation(libs.logging.interceptor)
-    //CSV Parsing
-    implementation(libs.opencsv)
     //Ktor
     implementation(libs.ktor.client.core)
     implementation(libs.ktor.client.okhttp)
@@ -86,4 +72,8 @@ dependencies {
     //Coroutines
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
+}
+
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
 }
