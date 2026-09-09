@@ -104,9 +104,14 @@ fun CompanyListingsScreen(
                         )
                     )
                     LazyColumn(
-                        modifier = Modifier.fillMaxSize(),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .weight(1f),
                     ) {
-                        items(state.companies.size) { i ->
+                        items(
+                            count = state.companies.size,
+                            key = { i -> state.companies[i].symbol }
+                        ) { i ->
                             val company = state.companies[i]
                             CompanyItem(
                                 company = company, modifier = Modifier.fillMaxWidth()

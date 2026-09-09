@@ -28,6 +28,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
@@ -44,26 +45,18 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.icons.core)
     implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
-    implementation(libs.androidx.compose.material.icons.extended)
-    implementation(libs.androidx.lifecycle.runtime.compose)
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
     //Core & UI
     implementation(libs.androidx.core.ktx)
     implementation(libs.multicolors)
     //Lifecycle
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.lifecycle.runtime.ktx)
-    //Serialization
-    implementation(libs.kotlinx.serialization.json)
     //Ktor
     implementation(libs.ktor.client.core)
     implementation(libs.ktor.client.android)
-    implementation(libs.ktor.serialization.kotlinx.json)
-    implementation(libs.ktor.client.logging)
-    implementation(libs.ktor.client.content.negotiation)
     //Coroutines
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
@@ -76,7 +69,6 @@ dependencies {
     implementation(libs.androidx.hilt.navigation.compose)
     //Testing
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
