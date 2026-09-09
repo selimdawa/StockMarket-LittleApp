@@ -10,7 +10,6 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.littleapp.stockmarket.model.CompanyListings
 import com.littleapp.stockmarket.ui.CompanyListingsScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,7 +20,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            //StockMarketNav()
+            StockMarketNav()
         }
     }
 }
@@ -31,12 +30,12 @@ fun StockMarketNav() {
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = CompanyListings,
+        startDestination = "main",
         enterTransition = { EnterTransition.None },
         exitTransition = { ExitTransition.None },
         popEnterTransition = { EnterTransition.None },
         popExitTransition = { ExitTransition.None }) {
-        composable<CompanyListings> {
+        composable("main") {
             CompanyListingsScreen()
         }
     }

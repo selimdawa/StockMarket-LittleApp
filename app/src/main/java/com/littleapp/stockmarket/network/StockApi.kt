@@ -9,9 +9,9 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class StockApi @Inject constructor(
-    private val client: HttpClient
-) {
+class StockApi @Inject constructor() {
+    private val client = HttpClient()
+
     suspend fun getListings(
         apiKey: String = DATA.API_KEY_STOCK
     ): HttpResponse {
