@@ -1,4 +1,4 @@
-<h1 align="center">Stock Market - Little App</h1>
+﻿<h1 align="center">Stock Market - Little App</h1>
 
 <p align="center">
  <a><img alt="Min SDK" src="https://img.shields.io/badge/Min SDK-24-020290?logo=android&logoColor=white"/></a>
@@ -14,7 +14,6 @@ One | Two | Three
 ![](https://raw.githubusercontent.com/selimdawa/SimpleComposeAppsKotlin/main/UI/97.jpg) | ![](https://raw.githubusercontent.com/selimdawa/SimpleComposeAppsKotlin/main/UI/98.jpg) | ![](https://raw.githubusercontent.com/selimdawa/SimpleComposeAppsKotlin/main/UI/99.jpg) | 
 
 - [Simple Compose Apps - Kotlin](https://github.com/selimdawa/SimpleComposeAppsKotlin/)
-
 
 ---
 
