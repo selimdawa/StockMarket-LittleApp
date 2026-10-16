@@ -11,9 +11,9 @@
 
 One | Two | Three 
 --- | --- | --- | 
-![](https://raw.githubusercontent.com/selimdawa/SimpleComposeAppsKotlin/main/UI/97.jpg) | ![](https://raw.githubusercontent.com/selimdawa/SimpleComposeAppsKotlin/main/UI/98.jpg) | ![](https://raw.githubusercontent.com/selimdawa/SimpleComposeAppsKotlin/main/UI/99.jpg) | 
+![](https://raw.githubusercontent.com/selimdawa/SimpleComposeApps/main/UI/97.jpg) | ![](https://raw.githubusercontent.com/selimdawa/SimpleComposeApps/main/UI/98.jpg) | ![](https://raw.githubusercontent.com/selimdawa/SimpleComposeApps/main/UI/99.jpg) | 
 
-- [Simple Compose Apps - Kotlin](https://github.com/selimdawa/SimpleComposeAppsKotlin/)
+- [Simple Compose Apps - Kotlin](https://github.com/selimdawa/SimpleComposeApps/)
 
 ---
 
